@@ -1,0 +1,25 @@
+{
+  "name": "reactnativeselected",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinnakrit/React-Native-Selected.git"
+  },
+  "keywords": [
+    "react-native-selected"
+  ],
+  "author": "Thinnakrit Knoo-Aksorn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thinnakrit/React-Native-Selected/issues"
+  },
+  "homepage": "https://github.com/thinnakrit/React-Native-Selected#readme",
+  "dependencies": {
+    "lodash": "^4.17.1"
+  }
+}
