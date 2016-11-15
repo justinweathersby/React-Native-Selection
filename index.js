@@ -85,6 +85,7 @@ class Selection extends Component {
             backgroundColor: '#ffffff',
             maxHeight: ScreenHeight - 300,
             borderRadius: 5,
+            overflow: 'hidden',
         },
         option: {
             width: ScreenWidth - 80,
