@@ -60,7 +60,7 @@ class Selection extends Component {
     checkIcon(icon){
         return(
             <View style={{
-                    marginRight: 20,
+                    marginRight: 10,
                 }}><Icon name={icon} size={this.props.iconSize} color={this.props.iconColor} /></View>
         )
     }
@@ -69,7 +69,7 @@ class Selection extends Component {
     let ScreenWidth = Dimensions.get("window").width;
 
     const { style, options, title, mode, iconColor, iconSize } = this.props;
-    const styles = {
+    let styles = {
     	main: {
     		width: ScreenWidth - 80,
     		marginLeft: 40,
@@ -92,6 +92,12 @@ class Selection extends Component {
             borderBottomWidth: 1,
             borderBottomColor: '#cccccc',
         }
+    }
+    if(style.body!== null){
+        styles.body = style.body;
+    }
+    if(style.option!== null){
+        styles.option = style.option;
     }
 
     return (
@@ -119,12 +125,8 @@ class Selection extends Component {
                                     }
 	    							return(
 	    								<TouchableOpacity key={k} onPress={()=> this.onSelected(data.name, data.value)}>
-			    							<View style={{
-                                                width: ScreenWidth - 80,
-                                                padding: 10,
-                                                borderBottomWidth: 1,
-                                                borderBottomColor: '#cccccc',
-                                                flexDirection: 'row',
+			    							<View style={styles.option, {
+
 			    								backgroundColor: data.value === this.state.value ? '#f2f2f2' : '#ffffff',
 			    							}}>
                                                 {icon}
