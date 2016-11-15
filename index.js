@@ -119,7 +119,12 @@ class Selection extends Component {
                                     }
 	    							return(
 	    								<TouchableOpacity key={k} onPress={()=> this.onSelected(data.name, data.value)}>
-			    							<View style={styles.options,{
+			    							<View style={{
+                                                width: ScreenWidth - 80,
+                                                padding: 10,
+                                                borderBottomWidth: 1,
+                                                borderBottomColor: '#cccccc',
+                                                flexDirection: 'row',
 			    								backgroundColor: data.value === this.state.value ? '#f2f2f2' : '#ffffff',
 			    							}}>
                                                 {icon}
