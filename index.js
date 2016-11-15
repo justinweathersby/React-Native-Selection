@@ -19,6 +19,8 @@ import {
 
 import _ from 'lodash';
 
+import Icon from "react-native-vector-icons/FontAwesome";
+
 class Selection extends Component {
 	static propTypes = {
 	  onSelection: React.PropTypes.func,
@@ -26,6 +28,8 @@ class Selection extends Component {
 	  title:  React.PropTypes.string,
 	  mode:  React.PropTypes.func,
 	  style:  React.PropTypes.object,
+      iconColor: React.PropTypes.string,
+      iconSize: React.PropTypes.string,
 	}
 	constructor(props) {
 	  super(props);
@@ -56,7 +60,7 @@ class Selection extends Component {
   	let ScreenHeight = Dimensions.get("window").height;
     let ScreenWidth = Dimensions.get("window").width;
 
-    const { style, options, title, mode } = this.props;
+    const { style, options, title, mode, iconColor, iconSize } = this.props;
     const styles = {
     	main: {
     		width: ScreenWidth - 80,
@@ -105,6 +109,14 @@ class Selection extends Component {
 			    							<View style={styles.options,{
 			    								backgroundColor: data.value === this.state.value ? '#f2f2f2' : '#ffffff',
 			    							}}>
+                                                {
+                                                    if(data.icon){
+                                                        return(
+                                                            <View style={{
+                                                                marginRight: 20,
+                                                            }}><Icon name={data.icon} size={iconSize} color={iconColor} /></View> )
+                                                    }
+                                                }
 			    								<Text>{data.name}</Text>
 			    							</View>
 		    							</TouchableOpacity>
