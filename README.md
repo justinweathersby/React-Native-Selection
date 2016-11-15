@@ -51,8 +51,8 @@ export default class App extends React.Component {
         options={options} 
         onSelection={(e)=>this.returnDataOnSelection.bind(this, e)}
         style={
-          body: {},
-          option: {}
+          body: null,
+          option: null,
         }
         iconSize={20}
         iconColor="#eee"
@@ -71,4 +71,4 @@ Component accepts several self-descriptive properties:
 - **`mode`** _(String)_ - (None Future).
 - **`iconSize`** _(Number)_ - icon size no default.
 - **`iconColor`** _(String)_ - icon color no default.
-- **`style`** _(array)_ - customize you style ( body , option )
+- **`style`** _(array)_ - customize you style add ( body: null , option: null )
