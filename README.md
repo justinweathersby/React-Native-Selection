@@ -77,14 +77,14 @@ Component accepts several self-descriptive properties:
 
 ```
   body: {
-      width: ScreenWidth - 80,
+      width: 300,
       backgroundColor: '#ffffff',
-      maxHeight: ScreenHeight - 300,
+      maxHeight: 300,
       borderRadius: 5,
       overflow: 'hidden',
   },
   option: {
-      width: ScreenWidth - 80,
+      width: 300,
       padding: 10,
       borderBottomWidth: 1,
       borderBottomColor: '#cccccc',
