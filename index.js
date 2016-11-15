@@ -91,6 +91,7 @@ class Selection extends Component {
             padding: 10,
             borderBottomWidth: 1,
             borderBottomColor: '#cccccc',
+            flexDirection: 'row',
         }
     }
     if(style.body!== null){
