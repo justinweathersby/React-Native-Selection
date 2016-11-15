@@ -113,7 +113,7 @@ class Selection extends Component {
     					<View style={styles.body}>
     						<ScrollView>
     							{_.map(options, (data, k)=>{
-                                    const icon = <View />;
+                                    let icon = <View />;
                                     if(data.icon !== ''){
                                         icon = this.checkIcon(data.icon)
                                     }
