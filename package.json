@@ -1,6 +1,6 @@
 {
   "name": "react-native-selection",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thinnakrit/React-Native-Selected.git"
+    "url": "git+https://github.com/thinnakrit/React-Native-Selection.git"
   },
   "keywords": [
     "react-native-selected"
@@ -16,9 +16,9 @@
   "author": "Thinnakrit Knoo-Aksorn",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/thinnakrit/React-Native-Selected/issues"
+    "url": "https://github.com/thinnakrit/React-Native-Selection/issues"
   },
-  "homepage": "https://github.com/thinnakrit/React-Native-Selected#readme",
+  "homepage": "https://github.com/thinnakrit/React-Native-Selection#readme",
   "dependencies": {
     "lodash": "^4.17.1"
   }

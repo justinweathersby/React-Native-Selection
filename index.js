@@ -58,7 +58,7 @@ class Selection extends Component {
 
     const { style, options, title, mode } = this.props;
     const styles = {
-    	body: {
+    	main: {
     		width: ScreenWidth - 80,
     		marginLeft: 40,
     		marginTop: 5,
@@ -67,7 +67,19 @@ class Selection extends Component {
     		borderWidth: 1,
     		padding: 10,
     		backgroundColor: '#ffffff',
-    	}
+    	},
+        body: {
+            width: ScreenWidth - 80,
+            backgroundColor: '#ffffff',
+            maxHeight: ScreenHeight - 300,
+            borderRadius: 5,
+        },
+        option: {
+            width: ScreenWidth - 80,
+            padding: 10,
+            borderBottomWidth: 1,
+            borderBottomColor: '#cccccc',
+        }
     }
     return (
     	<View>
@@ -85,21 +97,12 @@ class Selection extends Component {
     					alignItems: 'center',
                         justifyContent: 'center',
     				}}>
-    					<View style={{
-    						width: ScreenWidth - 80,
-				    		backgroundColor: '#ffffff',
-				    		maxHeight: ScreenHeight - 300,
-				    		borderRadius: 5,
-    					}}>
+    					<View style={styles.body}>
     						<ScrollView>
     							{_.map(options, (data, k)=>{
 	    							return(
 	    								<TouchableOpacity key={k} onPress={()=> this.onSelected(data.name, data.value)}>
-			    							<View style={{
-			    								width: ScreenWidth - 80,
-			    								padding: 10,
-			    								borderBottomWidth: 1,
-			    								borderBottomColor: '#cccccc',
+			    							<View style={styles.options,{
 			    								backgroundColor: data.value === this.state.value ? '#f2f2f2' : '#ffffff',
 			    							}}>
 			    								<Text>{data.name}</Text>
@@ -114,7 +117,7 @@ class Selection extends Component {
     		</Modal>
     		
     		<TouchableOpacity onPress={()=>this.openOption()}>
-				<View style={styles.body}>
+				<View style={styles.main}>
 					<Text>{this.state.title}</Text>
 				</View>
 			</TouchableOpacity>
