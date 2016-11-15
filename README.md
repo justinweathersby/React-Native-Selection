@@ -11,7 +11,9 @@ Select option in React Native
 
 1. Run `npm install react-native-selection --save`
 2. Run `npm install react-native-vector-icons --save`
-3. Run `react-native link react-native-vector-icons` `https://github.com/oblador/react-native-vector-icons`
+3. Run `react-native link react-native-vector-icons` 
+
+How to install `https://github.com/oblador/react-native-vector-icons`
 
 ## Usage
 
