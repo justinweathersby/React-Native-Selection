@@ -10,6 +10,8 @@ Select option in React Native
 ## Install `https://www.npmjs.com/package/react-native-selection`
 
 1. Run `npm install react-native-selection --save`
+2. Run `npm install react-native-vector-icons --save`
+3. Run `React-Native link react-native-vector-icons` 
 
 ## Usage
 
@@ -41,7 +43,17 @@ export default class App extends React.Component {
       },
     ];
     return (
-      <Selection title="Show you title on selection" options={options} onSelection={(e)=>this.returnDataOnSelection.bind(this, e)} />
+      <Selection 
+        title="Show you title on selection" 
+        options={options} 
+        onSelection={(e)=>this.returnDataOnSelection.bind(this, e)}
+        style={
+          body: {},
+          option: {}
+        }
+        iconSize="20"
+        iconColor="#eee"
+      />
     );
   }
 }
@@ -54,4 +66,6 @@ Component accepts several self-descriptive properties:
 - **`options`** _(array)_ - add you option for select.
 - **`title`** _(String)_ - text for default value.
 - **`mode`** _(String)_ - (None Future).
+- **`iconSize`** _(String)_ - icon size no default.
+- **`iconColor`** _(String)_ - icon color no default.
 - **`style`** _(array)_ - customize you style ( body , option )
