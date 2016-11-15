@@ -56,6 +56,14 @@ class Selection extends Component {
 			value,
 		})
 	}
+
+    checkIcon(icon){
+        return(
+            <View style={{
+                    marginRight: 20,
+                }}><Icon name={icon} size={this.props.iconSize} color={this.props.iconColor} /></View>
+        )
+    }
   render() {
   	let ScreenHeight = Dimensions.get("window").height;
     let ScreenWidth = Dimensions.get("window").width;
@@ -85,6 +93,7 @@ class Selection extends Component {
             borderBottomColor: '#cccccc',
         }
     }
+
     return (
     	<View>
     		
@@ -104,19 +113,16 @@ class Selection extends Component {
     					<View style={styles.body}>
     						<ScrollView>
     							{_.map(options, (data, k)=>{
+                                    const icon = <View />;
+                                    if(data.icon !== ''){
+                                        icon = this.checkIcon(data.icon)
+                                    }
 	    							return(
 	    								<TouchableOpacity key={k} onPress={()=> this.onSelected(data.name, data.value)}>
 			    							<View style={styles.options,{
 			    								backgroundColor: data.value === this.state.value ? '#f2f2f2' : '#ffffff',
 			    							}}>
-                                                {
-                                                    if(data.icon){
-                                                        return(
-                                                            <View style={{
-                                                                marginRight: 20,
-                                                            }}><Icon name={data.icon} size={iconSize} color={iconColor} /></View> )
-                                                    }
-                                                }
+                                                {icon}
 			    								<Text>{data.name}</Text>
 			    							</View>
 		    							</TouchableOpacity>
