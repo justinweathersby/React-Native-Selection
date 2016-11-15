@@ -50,10 +50,10 @@ export default class App extends React.Component {
         title="Show you title on selection" 
         options={options} 
         onSelection={(e)=>this.returnDataOnSelection.bind(this, e)}
-        style={
+        style={{
           body: null,
           option: null,
-        }
+        }}
         iconSize={20}
         iconColor="#eee"
       />
