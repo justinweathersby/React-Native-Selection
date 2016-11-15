@@ -29,7 +29,7 @@ class Selection extends Component {
 	  mode:  React.PropTypes.func,
 	  style:  React.PropTypes.object,
       iconColor: React.PropTypes.string,
-      iconSize: React.PropTypes.string,
+      iconSize: React.PropTypes.number,
 	}
 	constructor(props) {
 	  super(props);
