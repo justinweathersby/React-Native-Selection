@@ -125,10 +125,7 @@ class Selection extends Component {
                                     }
 	    							return(
 	    								<TouchableOpacity key={k} onPress={()=> this.onSelected(data.name, data.value)}>
-			    							<View style={styles.option, {
-
-			    								backgroundColor: data.value === this.state.value ? '#f2f2f2' : '#ffffff',
-			    							}}>
+			    							<View style={styles.option}>
                                                 {icon}
 			    								<Text>{data.name}</Text>
 			    							</View>
