@@ -32,14 +32,17 @@ export default class App extends React.Component {
       {
         name: 'Thailand',
         value: 1,
+        icon: 'facebook',
       },
       {
         name: 'China',
         value: 2,
+        icon: '',
       },
       {
         name: 'Japan',
         value: 3,
+        icon: '',
       },
     ];
     return (
