@@ -72,3 +72,22 @@ Component accepts several self-descriptive properties:
 - **`iconSize`** _(Number)_ - icon size no default.
 - **`iconColor`** _(String)_ - icon color no default.
 - **`style`** _(array)_ - customize you style add ( body: null , option: null )
+
+## Style
+
+```
+  body: {
+      width: ScreenWidth - 80,
+      backgroundColor: '#ffffff',
+      maxHeight: ScreenHeight - 300,
+      borderRadius: 5,
+      overflow: 'hidden',
+  },
+  option: {
+      width: ScreenWidth - 80,
+      padding: 10,
+      borderBottomWidth: 1,
+      borderBottomColor: '#cccccc',
+      flexDirection: 'row',
+  }
+```
