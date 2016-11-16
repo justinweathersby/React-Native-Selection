@@ -102,6 +102,7 @@ class Selection extends Component {
             borderBottomWidth: 1,
             borderBottomColor: '#cccccc',
             flexDirection: 'row',
+            marigin: 5,
         }
     }
     if(style.body!== null){
