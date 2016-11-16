@@ -41,13 +41,13 @@ class Selection extends Component {
 	  };
 	}
 	openOption(){
-        if(_.isEmpty(this.props.options)){
+        if(!_.isEmpty(this.props.options)){
     		this.setState({modalVisible: !this.state.modalVisible});
         }
 	}
 
 	onSelected(name, value){
-        if(_.isEmpty(this.props.options)){
+        if(!_.isEmpty(this.props.options)){
     		const data = {
     			value: value,
     			name: name,
@@ -131,7 +131,7 @@ class Selection extends Component {
     						<ScrollView>
     							{_.map(options, (data, k)=>{
                                     let icon = <View />;
-                                    if(_.isEmpty(data.icon)){
+                                    if(!_.isEmpty(data.icon)){
                                         icon = this.checkIcon(data.icon)
                                     }
 	    							return(
