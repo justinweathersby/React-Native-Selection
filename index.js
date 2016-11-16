@@ -41,22 +41,24 @@ class Selection extends Component {
 	  };
 	}
 	openOption(){
-        if(this.props.options !== null){
+        if(this.props.options === null && this.props.options === '' && this.props.options === undefined){
     		this.setState({modalVisible: !this.state.modalVisible});
         }
 	}
 
 	onSelected(name, value){
-		const data = {
-			value: value,
-			name: name,
-		}
-		this.props.onSelection(data);
-		this.setState({
-			modalVisible: false,
-			title: name,
-			value,
-		})
+        if(this.props.options === null && this.props.options === '' && this.props.options === undefined){
+    		const data = {
+    			value: value,
+    			name: name,
+    		}
+    		this.props.onSelection(data);
+    		this.setState({
+    			modalVisible: false,
+    			title: name,
+    			value,
+    		})
+        }
 	}
 
     checkIcon(icon){
