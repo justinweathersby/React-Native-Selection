@@ -41,13 +41,13 @@ class Selection extends Component {
 	  };
 	}
 	openOption(){
-        if(this.props.options === null || this.props.options === '' || this.props.options === undefined){
+        if(this.props.options === null){
     		this.setState({modalVisible: !this.state.modalVisible});
         }
 	}
 
 	onSelected(name, value){
-        if(this.props.options === null || this.props.options === '' || this.props.options === undefined){
+        if(this.props.options === null){
     		const data = {
     			value: value,
     			name: name,
@@ -74,7 +74,7 @@ class Selection extends Component {
 
     let { style, options, title, mode, iconColor, iconSize } = this.props;
 
-    if(options === null || options === '' || options === undefined){
+    if(options === null){
         options = [];
     }
 
@@ -131,7 +131,7 @@ class Selection extends Component {
     						<ScrollView>
     							{_.map(options, (data, k)=>{
                                     let icon = <View />;
-                                    if(data.icon !== '' || data.icon !== null || data.icon !== undefined){
+                                    if(data.icon !== null){
                                         icon = this.checkIcon(data.icon)
                                     }
 	    							return(
