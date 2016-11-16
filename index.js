@@ -68,7 +68,12 @@ class Selection extends Component {
   	let ScreenHeight = Dimensions.get("window").height;
     let ScreenWidth = Dimensions.get("window").width;
 
-    const { style, options, title, mode, iconColor, iconSize } = this.props;
+    let { style, options, title, mode, iconColor, iconSize } = this.props;
+
+    if(options === null || options === '' || options === undefined){
+        options = [];
+    }
+
     let styles = {
     	main: {
     		width: ScreenWidth - 80,
@@ -122,7 +127,7 @@ class Selection extends Component {
     						<ScrollView>
     							{_.map(options, (data, k)=>{
                                     let icon = <View />;
-                                    if(data.icon !== ''){
+                                    if(data.icon !== '' || data.icon !== null || data.icon !== undefined){
                                         icon = this.checkIcon(data.icon)
                                     }
 	    							return(
