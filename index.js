@@ -33,7 +33,7 @@ class Selection extends Component {
 	}
 	constructor(props) {
 	  super(props);
-	
+
 	  this.state = {
 	  	modalVisible: false,
 	  	title: props.title,
@@ -103,6 +103,9 @@ class Selection extends Component {
             borderBottomColor: '#cccccc',
             flexDirection: 'row',
             margin: 5,
+        },
+        placeholder: {
+          color: 'black'
         }
     }
     if(style.body!== null){
@@ -111,10 +114,13 @@ class Selection extends Component {
     if(style.option!== null){
         styles.option = style.option;
     }
+    if(style.placeholder !== null){
+      styles.placeholder = style.placeholder;
+    }
 
     return (
     	<View>
-    		
+
     		<Modal
     			visible={this.state.modalVisible}
     			onRequestClose={() =>{alert("Modal has been closed.")}}
@@ -149,10 +155,10 @@ class Selection extends Component {
     				</View>
     			</TouchableOpacity>
     		</Modal>
-    		
+
     		<TouchableOpacity onPress={()=>this.openOption()}>
 				<View style={styles.main}>
-					<Text>{this.state.title}</Text>
+					<Text style={style.placeholder}>{this.state.title}</Text>
 				</View>
 			</TouchableOpacity>
 		</View>
