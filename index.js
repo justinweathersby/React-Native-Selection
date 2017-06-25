@@ -108,6 +108,9 @@ class Selection extends Component {
           color: 'black'
         }
     }
+    if(style.main!== null){
+        styles.main = style.main;
+    }
     if(style.body!== null){
         styles.body = style.body;
     }
@@ -158,7 +161,7 @@ class Selection extends Component {
 
     		<TouchableOpacity onPress={()=>this.openOption()}>
 				<View style={styles.main}>
-					<Text style={style.placeholder}>{this.state.title}</Text>
+					<Text style={styles.placeholder}>{this.state.title}</Text>
 				</View>
 			</TouchableOpacity>
 		</View>
